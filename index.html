@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mubina ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="hero-card">
+        <p class="small-title">A LITTLE SCRAPBOOK OF US</p>
+
+        <h1>Happy Birthday,<br>Mubina ♡</h1>
+
+        <p class="intro">
+            From 3rd standard to forever,
+            a thousand memories and one beautiful friendship.
+        </p>
+
+        <button onclick="scrollToMemories()">
+            Open Our Memories ♡
+        </button>
+
+        <p class="handwritten">A friendship full of madness and love 🎀</p>
+    </div>
+</header>
+
+<section id="memories">
+    <p class="small-title">OUR LITTLE WORLD</p>
+
+    <h2>Our Beautiful Memories ♡</h2>
+
+    <p class="description">
+        Different years, countless moments, one unforgettable friendship.
+    </p>
+
+    <div class="gallery">
+
+        <div class="polaroid">
+            <img src="photo1.jpg" alt="Memory 1" onclick="openImage(this.src)">
+            <p>Our classroom memories ♡</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo2.jpg" alt="Memory 2" onclick="openImage(this.src)">
+            <p>Matching madness 😂</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo3.jpg" alt="Memory 3" onclick="openImage(this.src)">
+            <p>Professional troublemakers!</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo4.jpg" alt="Memory 4" onclick="openImage(this.src)">
+            <p>Little moments, big memories.</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo5.jpg" alt="Memory 5" onclick="openImage(this.src)">
+            <p>My favourite memories 💗</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo6.jpg" alt="Memory 6" onclick="openImage(this.src)">
+            <p>Just us being us!</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo7.jpg" alt="Memory 7" onclick="openImage(this.src)">
+            <p>Too many memories to count ✨</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo8.jpg" alt="Memory 8" onclick="openImage(this.src)">
+            <p>My favourite human ♡</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo9.jpg" alt="Memory 9" onclick="openImage(this.src)">
+            <p>Forever laughing together 😂</p>
+        </div>
+
+
+        <div class="polaroid">
+            <img src="photo11.jpg" alt="Memory 11" onclick="openImage(this.src)">
+            <p>Our friendship diary 💌</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo12.jpg" alt="Memory 12" onclick="openImage(this.src)">
+            <p>To many more memories!</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="story">
+    <p class="small-title">A FRIENDSHIP STORY</p>
+
+    <h2>Since 3rd Standard ♡</h2>
+
+    <div class="timeline">
+
+        <div class="memory">
+            <h3>🌸 The Beginning</h3>
+            <p>Two little girls and the beginning of an unexpected friendship.</p>
+        </div>
+
+        <div class="memory">
+            <h3>😂 The Not-Talking Era</h3>
+            <p>Our famous 9th and 10th standard chapter. Don't remind me!</p>
+        </div>
+
+        <div class="memory">
+            <h3>🎀 The Best Memories</h3>
+            <p>11th, 12th and all those moments we'll never forget.</p>
+        </div>
+
+        <div class="memory">
+            <h3>💗 Still Together</h3>
+            <p>First year college and a friendship that keeps growing.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="funny">
+    <p class="small-title">FRIENDSHIP DISCLAIMER</p>
+
+    <h2>Things You Should Know 😂</h2>
+
+    <div class="funny-card">
+        <p>You're lucky to have me.</p>
+        <p>Lifetime subscription of my nonsense.</p>
+        <p>We fight, we laugh, we repeat.</p>
+        <p>Nobody can handle us together!</p>
+        <p>Sorry, no refunds. You're stuck with me! 😂</p>
+    </div>
+</section>
+
+<section class="video-section">
+
+    <p class="small-title">MOVING MEMORIES</p>
+
+    <h2>Remember This? ♡</h2>
+
+    <video controls>
+        <source src="VID1.mp4" type="video/mp4">
+    </video>
+
+    <video controls>
+        <source src="VID2.mp4" type="video/mp4">
+    </video>
+
+</section>
+
+<section class="birthday">
+    <p class="small-title">THE SPECIAL SURPRISE</p>
+
+    <h2>Make a Wish, Mubina! 🎂</h2>
+
+    <div class="cake" onclick="cutCake()">🎂</div>
+
+    <p id="cakeMessage">Tap the cake to celebrate!</p>
+</section>
+
+<section class="letter-section">
+    <p class="small-title">A LITTLE SECRET</p>
+
+    <h2>Something For You 💌</h2>
+
+    <button onclick="openLetter()">Open Your Letter</button>
+</section>
+
+<div class="popup" id="letterPopup" onclick="closeLetterOutside(event)">
+    <div class="letter">
+        <h2>Dear Mubina ♡</h2>
+
+        <p>
+Happy Birthday to my favourite person!
+
+From our school days to all the memories we have created, I'm genuinely grateful for this friendship.
+
+We have had arguments, silly moments, laughter and so many stories.
+
+I hope your life is always filled with happiness, success and beautiful surprises.
+
+Stay the same crazy person you are.
+
+And remember...
+
+YOU ARE LUCKY TO HAVE ME! 😂❤️
+        </p>
+
+        <button onclick="closeLetter()">Close ♡</button>
+    </div>
+</div>
+
+<div class="image-popup" id="imagePopup" onclick="closeImage()">
+    <button class="image-close" onclick="closeImage()">✕</button>
+    <img id="expandedImage" alt="Expanded memory">
+</div>
+
+<footer>
+    Made with love, laughter and memories ♡
+    <p>Happy Birthday Mubina 🎀</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

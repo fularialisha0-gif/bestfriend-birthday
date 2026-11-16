@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8eee5;
+    color: #715448;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f2cbb8, #fff1e5, #e8d4c7);
+    padding: 25px;
+}
+
+.hero-card {
+    background: #fffaf2;
+    padding: 65px 35px;
+    max-width: 700px;
+    width: 100%;
+    border: 8px double #e8c9b7;
+    box-shadow: 0 15px 40px #a77b6540;
+    animation: appear 1s ease;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #b47d6b;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 75px);
+    color: #93685b;
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+.intro {
+    font-style: italic;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 450px;
+}
+
+.handwritten {
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+button {
+    background: #a87969;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #795449;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.description {
+    margin: 15px 0 40px;
+    font-style: italic;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.polaroid {
+    background: white;
+    padding: 12px 12px 25px;
+    box-shadow: 0 8px 20px #8b665322;
+    transform: rotate(-2deg);
+    transition: 0.3s;
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.polaroid:hover {
+    transform: rotate(0) translateY(-8px);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.polaroid p {
+    margin-top: 18px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 21px;
+}
+
+.story {
+    background: #f1dfd2;
+}
+
+.timeline {
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+.memory {
+    background: #fffaf3;
+    margin: 20px;
+    padding: 25px;
+    border-left: 4px solid #c58c78;
+    text-align: left;
+}
+
+.memory h3 {
+    margin-bottom: 10px;
+}
+
+.funny-card {
+    max-width: 550px;
+    margin: auto;
+    background: #fffaf2;
+    padding: 30px;
+    border: 2px dashed #d8a995;
+}
+
+.funny-card p {
+    padding: 15px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+
+.video-section {
+    background: #f2e1d5;
+}
+
+video {
+    width: 90%;
+    max-width: 650px;
+    border: 10px solid white;
+    margin-top: 25px;
+}
+
+.birthday {
+    background: #fff5eb;
+}
+
+.cake {
+    font-size: 100px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.cake:hover {
+    transform: scale(1.15);
+}
+
+.cake.cut {
+    animation: bounce 0.7s;
+}
+
+@keyframes bounce {
+    50% {
+        transform: scale(1.3) rotate(10deg);
+    }
+}
+
+#cakeMessage {
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+.confetti {
+    position: fixed;
+    top: -30px;
+    z-index: 40;
+    font-size: 25px;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.letter-section {
+    background: #f1dfd2;
+}
+
+.popup,
+.image-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #49352ecc;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 50;
+}
+
+.letter {
+    background: #fff8ed;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border: 8px double #e7c6b1;
+    animation: appear 0.5s;
+}
+
+.letter p {
+    line-height: 2;
+    margin-top: 20px;
+    white-space: pre-line;
+}
+
+.image-popup img {
+    max-width: 90%;
+    max-height: 85vh;
+    border: 10px solid white;
+    background: white;
+}
+
+.image-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin: 0;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+footer {
+    padding: 35px;
+    background: #e9d3c5;
+    font-family: 'Dancing Script', cursive;
+    font-size: 23px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+@media(max-width: 600px) {
+    section {
+        padding: 55px 15px;
+    }
+
+    .hero-card {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .polaroid img {
+        height: 240px;
+    }
+
+    .letter {
+        padding: 25px;
+    }
+}
